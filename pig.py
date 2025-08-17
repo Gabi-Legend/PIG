@@ -21,7 +21,7 @@ def game() :
             print(f"You rolled {dice}, you score is now : {player1Score}")
         player1Rolls-=1
         if player1Rolls != 1:
-            time.sleep(0.5)
+            time.sleep(1)
 
     print("Second player turn")
     player2Rolls = int(input("How many times do you want to roll the dice? : "))
@@ -40,7 +40,7 @@ def game() :
             print(f"You rolled {dice}, you score is now : {player2Score}")
         player2Rolls-=1
         if player2Rolls != 1:
-            time.sleep(0.5)
+            time.sleep(1)
 
     if player1Score == player2Score:
         print("It's a tie!")
@@ -52,5 +52,5 @@ def game() :
 while True:
     game()
     playAgain = input("Do you want to play again?(Y/N): ").lower()
-    if playAgain in ["n","no","nope","na"]:
+    if playAgain not in ["y","ya","yes","yup"]:
         break
